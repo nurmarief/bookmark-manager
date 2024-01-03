@@ -69,7 +69,7 @@ function buildBookmarksDOM() {
     // bookmarks__item-icon
     const bookmarksItemIconEl = document.createElement('img');
     bookmarksItemIconEl.classList.add('bookmarks__item-icon');
-    bookmarksItemIconEl.setAttribute('src', `https:/s2.googleusercontent.com/s2/favicons?domain=${url}`);
+    bookmarksItemIconEl.setAttribute('src', `https://s2.googleusercontent.com/s2/favicons?domain=${url}`);
     bookmarksItemIconEl.setAttribute('alt', 'Favicon');
     // bookmarks__item-title
     const bookmarksItemTitleEl = document.createElement('a');
