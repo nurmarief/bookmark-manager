@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <h1 title="Bookmark Manager"></h1>
+      <button
+        class="btn btn--align_center btn--size_lg btn--color_black"
+        id="show-modal-btn"
+      >
+        Add Bookmark
+      </button>
+      <div class="bookmarks" id="bookmarks"></div>
+      <div class="modal modal--is-hidden" id="modal">
+        <div class="modal__modal-container">
+          <i class="modal__close-icon fas fa-times" id="close-modal-icon"></i>
+          <div class="modal__modal-header">
+            <h3 class="modal__modal-title">ADD Bookmark</h3>
+          </div>
+          <div class="modal__modal-content">
+            <form id="bookmark-form">
+              <div class="form__form-group">
+                <label for="website-name" class="form__form-label"
+                  >Website name</label
+                >
+                <input
+                  type="text"
+                  class="form__form-input"
+                  id="website-name"
+                  name="website-name"
+                />
+              </div>
+              <div class="form__form-group">
+                <label for="website-url" class="form__form-label"
+                  >Website url</label
+                >
+                <input
+                  type="text"
+                  class="form__form-input"
+                  id="website-url"
+                  name="website-url"
+                />
+              </div>
+              <button
+                class="btn btn--size_small btn--color_primary"
+                type="submit"
+              >
+                Save
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
