@@ -1,0 +1,209 @@
+/* Google Fonts: Karla */
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=League+Spartan:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #7c59b0;
+  --secondary-color: #fff;
+  --border-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  background-color: var(--primary-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.29'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* .btn */
+
+.btn {
+  border-width: 0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--size_small {
+  margin-top: 10px;
+  height: 30px;
+  width: 100px;
+}
+
+.btn--size_lg {
+  padding: 20px;
+  margin-top: 20px;
+  width: 275px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn--color_black {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--secondary-color);
+}
+
+.btn--color_primary {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn--align_center {
+  display: block;
+  margin-inline: auto;
+}
+
+.show-modal-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .bookmarks */
+
+.bookmarks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.bookmarks__item {
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--secondary-color);
+}
+
+.bookmarks__item:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.bookmarks__information {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.bookmarks__item-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bookmarks__item-title:link,
+.bookmarks__item-title:visited {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.bookmarks__item-title:hover,
+.bookmarks__item-title:active {
+  text-decoration: underline;
+}
+
+.bookmarks__item-icon {
+  margin-right: 5px;
+  height: 20px;
+  width: 20px;
+  vertical-align: sub;
+}
+
+.bookmarks__delete-item-icon {
+  z-index: 2;
+  float: right;
+  cursor: pointer;
+}
+
+/* .modal*/
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal--is-hidden {
+  display: none;
+}
+
+.modal__modal-container {
+  width: 500px;
+  max-width: 95%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal__close-icon {
+  float: right;
+  position: relative;
+  top: 13px;
+  right: 13px;
+  font-size: 24px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.modal__modal-header {
+  padding: 15px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.modal__modal-content {
+  padding: 20px;
+  background: whitesmoke;
+}
+
+.modal__modal-title {
+  font-size: 18px;
+}
+
+/* Form */
+.form__form-group {
+  height: 55px;
+}
+
+.form__form-input {
+  display: block;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 5px;
+  width: 97%;
+}
+
+.form__form-label {
+  display: block;
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 600px) {
+  .bookmarks {
+    flex-direction: row;
+  }
+}
